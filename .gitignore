@@ -1,11 +1,12 @@
 # Unity generated folders to ignore
-Library/
-Temp/
-Obj/
-Build/
-Builds/
-Logs/
-MemoryCaptures/
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+UserSettings/
 
 # OS-generated files
 .DS_Store
@@ -27,12 +28,14 @@ Thumbs.db
 *.opendb
 *.VC.db
 .idea/
+.vs/
 
-# Unity generated
+# Unity generated crash/debug files
 UnityGenerated/
 sysinfo.txt
 
+# Unity package exports
+*.unitypackage
 
 # Notes
 chrono_lite_ideer
-
