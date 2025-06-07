@@ -41,3 +41,9 @@ sysinfo.txt
 
 # Notes
 chrono_lite_ideer
+
+# Un-ignore .keep files
+!Assets/.keep
+!ProjectSettings/.keep
+!Packages/.keep
+
