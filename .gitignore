@@ -1,0 +1,43 @@
+# Unity folders to keep
+Assets/
+ProjectSettings/
+Packages/
+UserSettings/
+
+# Unity generated folders to ignore
+Library/
+Temp/
+Obj/
+Build/
+Builds/
+Logs/
+MemoryCaptures/
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# IDE files
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+.idea/
+
+# Unity generated
+UnityGenerated/
+sysinfo.txt
+
+
+# Notes
+chrono_lite_ideer
