@@ -1,9 +1,3 @@
-# Unity folders to keep
-Assets/
-ProjectSettings/
-Packages/
-UserSettings/
-
 # Unity generated folders to ignore
 Library/
 Temp/
@@ -41,9 +35,4 @@ sysinfo.txt
 
 # Notes
 chrono_lite_ideer
-
-# Un-ignore .keep files
-!Assets/.keep
-!ProjectSettings/.keep
-!Packages/.keep
 
