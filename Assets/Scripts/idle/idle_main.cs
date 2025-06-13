@@ -1,19 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 // ---- denne classen er for progress bar/ interval baren for skills ----
 public class Idle_main : MonoBehaviour, Ibutton_click
 {
-    private Slider xp_bar;
     private string skill;
+    private Slider xp_bar;
+    private float xp;
+    private TMP_Text lvl;
+    private int temp_lvl;
+    private bool lvl_up = false;
 
     public void button_click()
     {
         skill = this.transform.parent.gameObject.name;
         //Debug.Log(this.transform.parent.gameObject.name);
 
+        Debug.Log(this.transform.parent.gameObject);
         switch (skill)
         {
             case "Fishing":
@@ -37,6 +43,8 @@ public class Idle_main : MonoBehaviour, Ibutton_click
         }
 
         xp_bar = GameObject.Find("XP-bar_" + skill).GetComponent<Slider>();
+        lvl = GameObject.Find("Lvl_" + skill).GetComponent<TMP_Text>();
+
         StartCoroutine(interval_progress_bar());
     }
 
@@ -49,6 +57,25 @@ public class Idle_main : MonoBehaviour, Ibutton_click
             xp_bar.value += 1000;
             Debug.Log(xp_bar.value);
             yield return new WaitForSecondsRealtime(interval_timer); // bruk variabel istedenfor konstant 3 utifra verktøy spilleren bruker.
+            lvl_up = true;
+            lvl_up_skill();
         }
     }
+
+    public void lvl_up_skill()
+    {
+        if (lvl_up)
+        {
+            temp_lvl = int.Parse(lvl.text);
+            temp_lvl++;
+            lvl.text = temp_lvl.ToString();
+        }
+    }
+
+    // ---- XP-system ----
+
+    /* ---- Hva jeg trenger:
+     * hente hvilket lvl skill er, for å vite hvor mye xp som trengs for å lvl
+     * hente hvilket tool spilleren har equipped, for å vite hvor lang tid intervallet tar mellom hver action
+     */
 }
