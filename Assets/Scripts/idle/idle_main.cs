@@ -16,10 +16,12 @@ public class Idle_main : MonoBehaviour, Ibutton_click
 
     public void button_click()
     {
-        skill = this.transform.parent.gameObject.name;
-        //Debug.Log(this.transform.parent.gameObject.name);
+        Debug.Log(Tool.Flimsy_rod.Name);
+        Debug.Log(Tool.Flimsy_rod.Lvl_requirement);
+        Debug.Log(Tool.Flimsy_rod.Quality);
 
-        Debug.Log(this.transform.parent.gameObject);
+        skill = this.transform.parent.gameObject.name;
+
         switch (skill)
         {
             case "Fishing":
